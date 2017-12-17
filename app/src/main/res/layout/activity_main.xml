@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dell.logapp.MainActivity">
+    tools:context="com.example.dell.logapp.MainActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        >
+
+    </android.support.v7.widget.Toolbar>
 
     <android.support.design.widget.TextInputLayout
     android:id="@+id/main.til.username"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+       android:gravity="center"
         app:errorEnabled="true"
-    android:gravity="center">
+   >
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="300dp"
@@ -24,9 +36,9 @@
         android:id="@+id/main.til.password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         app:errorEnabled="true"
         app:passwordToggleEnabled="true"
+        android:gravity="center"
         android:layout_below="@+id/main.til.username">
 
         <android.support.design.widget.TextInputEditText
@@ -42,11 +54,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/main.til.password"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_marginTop="32dp"
-        android:background="@drawable/button_background"
         android:text="@string/login"
         android:textSize="25sp" />
 
 
-</RelativeLayout>
+</LinearLayout>
